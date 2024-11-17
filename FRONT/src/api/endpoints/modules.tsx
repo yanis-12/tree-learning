@@ -6,6 +6,7 @@ export const modulesApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getModules: builder.query<Module[], void>({
       query: () => '/api/modules',
+
     }),
     // Ajouter un module
     addModule: builder.mutation<Module, { title: string }>({
