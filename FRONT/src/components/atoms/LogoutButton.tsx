@@ -5,6 +5,7 @@ import { logout } from '../../store/slices/authSlice';
 
 interface LogoutButtonProps {
   className?: string; 
+  
 }
 
 const LogoutButton: React.FC<LogoutButtonProps> = ({ className }) => {
