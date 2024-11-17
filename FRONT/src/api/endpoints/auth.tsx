@@ -10,6 +10,7 @@ export const authApi = apiSlice.injectEndpoints({
       }), 
       invalidatesTags: ['Auth'],
     }),
+    
   }),
 });
 

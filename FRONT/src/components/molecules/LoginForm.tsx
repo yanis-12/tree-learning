@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import du hook pour la navigation
+import { useNavigate } from 'react-router-dom';
 import Input from '../atoms/Input';
 import Button from '../atoms/Button';
-import { useLoginMutation } from '../../api/endpoints/auth'; // Mutation d'authentification
+import { useLoginMutation } from '../../api/endpoints/auth'; 
 import { useDispatch } from 'react-redux';
-import { setToken } from '../../store/slices/authSlice'; // Action pour stocker le token dans le store
+import { setToken } from '../../store/slices/authSlice'; 
 
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ const LoginForm: React.FC = () => {
       const { token } = await login({ email, password }).unwrap(); // Appelle l'API et déstructure le token
       dispatch(setToken(token)); // Enregistre le token dans le store
       console.log('Connexion réussie !');
-      navigate('/modules'); // Redirection vers la page des modules
+      navigate('/modules'); 
     } catch (error) {
       console.error('Erreur de connexion :', error);
     }

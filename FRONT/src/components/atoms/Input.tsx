@@ -17,4 +17,5 @@ const Input: React.FC<InputProps> = ({ placeholder, type = 'text', value, onChan
   />
 );
 
+
 export default Input;
