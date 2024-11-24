@@ -16,15 +16,13 @@ export const apiSlice = createApi({
       return headers;
     },
   }),
-  tagTypes: ['Auth', 'Modules'], // Tags pour gérer le cache
+  tagTypes: ['Auth', 'Modules'], 
   endpoints: (builder) => ({
-    // Endpoint pour récupérer les modules
     getModules: builder.query({
       query: () => '/modules', // Route à appeler
-      providesTags: ['Modules'], // Mise en cache liée aux modules
+      providesTags: ['Modules'], 
     }),
   }),
 });
 
-// Exporte le hook généré automatiquement pour l'endpoint `getModules`
 export const { useGetModulesQuery } = apiSlice;

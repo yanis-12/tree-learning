@@ -1,7 +1,7 @@
 import React from 'react';
 import { useGetModulesQuery } from '../../api/endpoints/modules';
 import { Module } from '../../types/modules';
-import LogoutButton from '../atoms/LogoutButton'; // Import du bouton Logout
+import LogoutButton from '../atoms/LogoutButton'; 
 
 const ModulesList: React.FC = () => {
   const { data: modules, error, isLoading } = useGetModulesQuery();
